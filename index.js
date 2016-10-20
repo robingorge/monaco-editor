@@ -5,12 +5,19 @@ var io = require('socket.io')(http);
 
 var express=require('express');
 
+
+
+
+
 app.use(express.static('.'));
 
 
 app.get('/', function(req, res){
   res.sendfile('index.html');
 });
+
+
+
 
 
 
@@ -33,6 +40,6 @@ io.on('connection', function(socket){
   });
 });
 
-http.listen(3000, function(){
-  console.log('listening on *:3000');
+http.listen(5000,function(){
+  console.log('listening on *:5000');
 });
